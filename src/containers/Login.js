@@ -40,11 +40,11 @@ export default class Login {
   handleSubmitAdmin = e => {
     e.preventDefault()
     const user = {
-      type: "Admin",
-      email: e.target.querySelector(`input[data-testid="employee-email-input"]`).value,
-      password: e.target.querySelector(`input[data-testid="employee-password-input"]`).value,
-      status: "connected"
-    }
+			type: "Admin",
+			email: e.target.querySelector(`input[data-testid="admin-email-input"]`).value,
+			password: e.target.querySelector(`input[data-testid="admin-password-input"]`).value,
+			status: "connected",
+		}
     this.localStorage.setItem("user", JSON.stringify(user))
     this.login(user)
       .catch(
