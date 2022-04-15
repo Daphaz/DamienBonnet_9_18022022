@@ -1,8 +1,7 @@
 import VerticalLayout from './VerticalLayout.js'
 
 export default () => {
-
-  return `
+	return `
     <div class='layout'>
       ${VerticalLayout(120)}
       <div class='content'>
@@ -38,7 +37,7 @@ export default () => {
                     <input required type="number" class="form-control blue-border input-icon input-icon-right" data-testid="amount" placeholder="348"/>
                   </div>
                   <div class="col-half-row">
-                    <div class="flex-col"> 
+                    <div class="flex-col">
                       <label for="vat" class="bold-label">TVA</label>
                       <input type="number" class="form-control blue-border" data-testid="vat" placeholder="70" />
                     </div>
@@ -56,7 +55,8 @@ export default () => {
                   <div class="col-half">
                     <label for="file" class="bold-label">Justificatif</label>
                     <input required type="file" accept="image/png,image/jpeg,image/jpg" class="form-control blue-border" data-testid="file" />
-                  </div>
+																				<div class='alert alert-warning mt-2 custom-error' >Le type du fichier n'est pas accepté</div>
+																		</div>
                 </div>
             </div>
             <div class="row">
